@@ -10,492 +10,417 @@
 		padding-left: var(--bs-gutter-x) !important
 		padding-right: var(--bs-gutter-x)!important
 
+.row-trim
+	max-height: 283px
+
 .main
 	padding-top: 60px
-	&__descr
-		margin-left: 15px
-		h2
+	&__company
+		display: flex
+		&-title
+			font-style: normal
 			font-weight: 700
 			font-size: 24px
 			line-height: 33px
 			color: #333333
-			text-transform: uppercase
+		&-descr
+			display: flex
+			align-items: center
+			margin-bottom: 12px
+			font-style: normal
+			font-weight: 400
+			font-size: 14px
+			line-height: 19px
+			color: #333333
+			p
+				margin: 0
+			img
+				width: 16px
+				height: 16px
+				margin-right: 10px
+		&-ratings
+			display: flex
+			margin-top: 20px
+			margin-right: -10px
 			margin-bottom: 22px
-	&__position
-		position: relative
-	&__rect
-		margin-bottom: 20px
-		height: 263px
-		display: flex
-		align-items: center
-		justify-content: center
+		&-rating
+			cursor: pointer
+			background: url(../images/dist/baks-licke.png) 0 -50px/cover no-repeat
+			width: 40px
+			margin-right: 10px
+			height: 40px
+			transition: all .30s ease-in-out
+			&:hover
+				background-position: 0 0
+			&.active
+				background-position: 0 0
+				pointer-events: none
+		&-btn
+			margin-top: 15px
+			padding: 13px 43px
+			font-weight: 400
+			font-size: 14px
+			line-height: 100%
+			text-align: center
+			color: #819EC7
+			background: #FFFFFF
+			border: 1px solid #D4DBF2
+			border-radius: 20px
+			&-hidden
+				display: none
+	&__logo
+		margin-right: 30px
 		background: #FFFFFF
 		border: 1px solid #EAEFFF
 		box-shadow: 0px 0px 10px #EAEFFF
-	&__ratings
-		display: flex
-		margin-right: -10px
-		margin-bottom: 22px
-	&__rating
-		cursor: pointer
-		background: url(../images/dist/baks-licke.png) 0 -50px/cover no-repeat
-		width: 40px
-		margin-right: 10px
-		height: 40px
-		transition: all .30s ease-in-out
-		&:hover
-			background-position: 0 0
-		&.active
-			background-position: 0 0
-			pointer-events: none
-	&__contacts
-		margin-bottom: 28px
-		p
-			font-weight: 400
-			font-size: 14px
-			color: #333333
-			margin-bottom: 5px
-			img
-				margin-right: 10px
-	&__btn
-		padding: 8px 40px
-		font-weight: 400
-		font-size: 14px
-		color: #819EC7
-		background: #FFFFFF
-		border: 1px solid #D4DBF2
-		border-radius: 20px
-	&__mores
+		img
+			padding: 32px 67px
+	&__slider
 		display: flex
 		justify-content: space-between
-		margin-bottom: 12px
-	&__more
-		position: relative
-		img
-			position: relative
-		&-text
+		&-wrapper
 			position: absolute
-			bottom: 0
-			font-style: normal
+			bottom: 10px
+			left: 10px
+		&-title
+			margin-bottom: 10px
 			font-weight: 400
 			font-size: 12px
 			line-height: 16px
 			color: #FFFFFF
-			padding: 10px
-			p
-				margin: 0
-				margin-bottom: 10px
-		&-read
-			margin: 0 !important
+		&-action
+			font-weight: 400
+			font-size: 12px
+			line-height: 16px
 			color: #FFCA50
-	&__slide
-		img
-			display: block
-			margin: 0 auto
-	&__wrapper
-		position: absolute
-		top: 0
-		padding: 20px
-		width: 405px
-		height: 607px
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		box-shadow: 0px 0px 10px #EAEFFF
-		h4
+			text-decoration: none
+		&-img
+			margin-top: 15px
+			img
+				display: block
+				margin: 0 auto
+	&__crit
+		&-wrapper
+			padding: 20px
+			background: #FFFFFF
+			border: 1px solid #EAEFFF
+			box-shadow: 0px 0px 10px #EAEFFF
+		&-title
+			font-style: normal
 			font-weight: 700
 			font-size: 16px
 			color: #333333
-			margin-bottom: 20px
-	&__lists
-		margin-bottom: 40px
-	&__list
-		display: flex
-		justify-content: space-between
-		align-items: center
-		border-bottom: 1px solid #EAEFFF
-		height: 47px
-		font-weight: 400
-		font-size: 16px
-		color: #969696
-		p
-			margin: 0
-		&-blue
-			color: #273B98
-	&__button
-		padding: 11px 100px
+		&-item
+			padding: 10px 0
+			display: flex
+			justify-content: space-between
+			border-bottom: 1px solid #EAEFFF
+			&--left
+				font-weight: 400
+				font-size: 16px
+				color: #969696
+			&--right
+				font-weight: 400
+				font-size: 16px
+				color: #273B98
+		&-btn
+			margin-top: 40px
+			padding: 10px 0
+			width: 100%
+			font-weight: 400
+			font-size: 14px
+			text-align: center
+			color: #819EC7
+			background: #FFFFFF
+			border: 1px solid #D4DBF2
+			border-radius: 20px
+	&__text
+		margin-top: 20px
 		background: #FFFFFF
-		border: 1px solid #D4DBF2
-		border-radius: 20px
-		font-weight: 400
-		font-size: 14px
-		line-height: 100%
-		text-align: center
-		color: #819EC7
-
-.description__wrapper
-	height: 763px
-	background: #FFFFFF
-	border: 1px solid #EAEFFF
-	box-shadow: 0px 0px 10px #EAEFFF
-	padding: 0 20px
-	padding-top: 50px
-	p
-		margin: 0
-		padding-bottom: 25px
+		border: 1px solid #EAEFFF
+		box-shadow: 0px 0px 10px #EAEFFF
+		font-style: normal
 		font-weight: 400
 		font-size: 16px
 		line-height: 22px
 		color: #333333
+		&-wrapper
+			padding: 50px 20px
 
 .share
-	padding-top: 60px
-	h2
+	padding-top: 40px
+	&__title
 		font-weight: 700
 		font-size: 16px
-		line-height: 22px
 		color: #333333
-		margin-bottom: 20px
-	&__cont
-		margin: 0
 	&__wrapper
+		margin-top: 20px
+		margin-bottom: 40px
 		display: flex
-		align-items: center
-		height: 80px
+		justify-content: space-around
 		background: #F8FAFF
 		border: 1px solid #EAEFFF
 		box-shadow: 0px 0px 10px #EAEFFF
 		border-radius: 5px
-		margin-bottom: 40px
-		:nth-child(2)
-			border-left: 1px solid #D4DBF2
-			border-right: 1px solid #D4DBF2
-	&__opinion
-		height: 170px
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		border-radius: 5px
-		padding: 20px
-		h2
-			margin-left: 15px
-			font-weight: 700
-			font-size: 16px
-			color: #333333
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-		img
-			margin-bottom: 18px
-	&__answer
-		display: flex
-		justify-content: space-between
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-			span
-				font-weight: 700
-				font-size: 14px
-				color: #333333
 	&__item
-		img
+		padding: 20px 0
+		width: 100%
+		a
 			display: block
-			margin: 0 auto
-	&__schemes
-		padding: 20px
-		width: 688px
-		height: 320px
+			border-right: 1px solid #D4DBF2
+			img
+				display: block
+				margin: 0 auto
+		a[data-atr="nob"]
+			border: none
+	&__opinion
 		background: #FFFFFF
 		border: 1px solid #EAEFFF
 		border-radius: 5px
-		margin-bottom: 40px
-		:last-child
-			border-bottom: none
-		h2
+		&-hiddenL
+			display: none
+		&-wrapper
+			padding: 20px
+		img
+			width: 100%
+			margin-bottom: 20px
+		&-title
+			margin-bottom: 20px
+			padding-left: 15px
 			font-weight: 700
 			font-size: 16px
 			color: #333333
-		p
+		&-answer
+			margin-bottom: 20px
+			font-weight: 400
+			font-size: 14px
+			color: #969696
+		&-container
+			display: flex
+			justify-content: space-between
+			font-weight: 400
+			font-size: 14px
+			color: #969696
+			p
+				margin: 0
+			span
+				font-style: normal
+				font-weight: 700
+				color: #333333
+	&__signs
+		background: #FFFFFF
+		border: 1px solid #EAEFFF
+		border-radius: 5px
+		&-wrapper
+			padding: 20px
+		&-title
 			margin: 0
-			margin-left: 20px
+			font-weight: 700
+			font-size: 16px
+			color: #333333
+		&-item
+			display: flex
+			align-items: center
 			padding: 15px 0
 			font-weight: 400
 			font-size: 14px
 			color: #969696
-	&__scheme
-		display: flex
-		align-items: center
-		border-bottom: 1px solid #EAEFFF
-		img
-			width: 40px
-			height: 40px
-	&__line
-		margin: 0
-		width: 1255px
+			border-bottom: 1px solid #EAEFFF
+			img
+				margin-right: 20px
+				height: 40px
+			&:last-child
+				border: none
+		&-img-hidden
+			display: none
+	&__hr
+		margin-top: 40px
+		margin-bottom: 0
 		height: 3px
-		background: #EAEFFF
+		background-color: #EAEFFF
 
-.comm
-	h2
-		padding-top: 20px
-		margin-bottom: 29px
-		font-style: normal
+.comment
+	padding-top: 20px
+	&__title
+		margin-bottom: 30px
 		font-weight: 700
 		font-size: 16px
-		line-height: 22px
 		color: #333333
-	&__form
-		p
-			margin: 0
-			margin-bottom: 5px
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-			span
-				color: #FF0000
-		&--top
-			display: flex
-		&--left
-			input
-				width: 405px
-				height: 40px
-				background: #FFFFFF
-				border: 1px solid #EAEFFF
-			:nth-child(3n)
-				margin-top: 20px
-		&--right
-			textarea
-				width: 830px
-				height: 124px
-				resize: none
-				background: #FFFFFF
-				border: 1px solid #EAEFFF
-		&--bottom
-			display: flex
-		&--one
-			select
-				width: 405px
-				height: 40px
-				background: #FFFFFF
-				border: 1px solid #EAEFFF
-				font-weight: 400
-				font-size: 14px
-				color: #819EC7
-				padding-left: 15px
-		&--two
-			display: flex
-			flex-direction: column
-			select
-				width: 405px
-				height: 40px
-				background: #FFFFFF
-				border: 1px solid #EAEFFF
-				margin-bottom: 10px
-				font-weight: 400
-				font-size: 14px
-				color: #819EC7
-				padding-left: 15px
-			input
-				width: 405px
-				height: 40px
-				background: #FFFFFF
-				border: 1px solid #EAEFFF
-				margin-bottom: 10px
-				font-weight: 400
-				font-size: 14px
-				color: #D1D1D1
-				padding-left: 15px
-			a
-				font-weight: 400
-				font-size: 14px
-				line-height: 19px
-				text-align: right
-				text-decoration-line: underline
-				color: #5277F7
-				padding-right: 10px
-		&--three
-			display: flex
-			flex-direction: column
-			select
-				width: 405px
-				height: 40px
-				background: #FFFFFF
-				border: 1px solid #EAEFFF
-				margin-bottom: 10px
-				font-weight: 400
-				font-size: 14px
-				color: #819EC7
-				padding-left: 15px
-			input
-				width: 405px
-				height: 40px
-				background: #FFFFFF
-				border: 1px solid #EAEFFF
-				margin-bottom: 10px
-				font-weight: 400
-				font-size: 14px
-				color: #D1D1D1
-				padding-left: 15px
-			a
-				font-weight: 400
-				font-size: 14px
-				line-height: 19px
-				text-align: right
-				text-decoration-line: underline
-				color: #5277F7
-				padding-right: 10px
-				padding-bottom: 20px
-		&--btn
-			display: block
-			margin: 0 auto
-			padding: 10px 140px
-			background: #5277F7
-			border-radius: 20px
-			border: none
-			font-weight: 400
-			font-size: 14px
-			text-align: center
-			color: #FFFFFF
-
-.comm__line
-	width: 1255px
-	height: 1px
-	background: #EAEFFF
-
-.all-comm
-	&__wrapper
-		padding: 0 10px
-	h2
-		padding: 0
-		padding-top: 20px
-		padding-bottom: 20px
-		font-weight: 700
-		font-size: 16px
-		line-height: 22px
-		color: #333333
-	&__date
-		padding: 0
-		display: flex
-		flex-direction: column
-		label
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-		select
-			margin-top: 5px
-			width: 405px
-			height: 40px
-			background: #FFFFFF
-			border: 1px solid #EAEFFF
-			padding-left: 15px
-			font-style: normal
-			font-weight: 400
-			font-size: 14px
-			color: #819EC7
-	&__rating
-		padding: 0
-		display: flex
-		flex-direction: column
-		label
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-		select
-			margin-top: 5px
-			width: 405px
-			height: 40px
-			background: #FFFFFF
-			border: 1px solid #EAEFFF
-			padding-left: 15px
-			font-style: normal
-			font-weight: 400
-			font-size: 14px
-			color: #819EC7
-	&__criteria
-		padding: 0
-		display: flex
-		flex-direction: column
-		label
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-		select
-			margin-top: 5px
-			width: 405px
-			height: 40px
-			background: #FFFFFF
-			border: 1px solid #EAEFFF
-			padding-left: 15px
-			font-style: normal
-			font-weight: 400
-			font-size: 14px
-			color: #819EC7
-
-.trader
-	padding-top: 60px
-	&__container
-		width: 1255px
-		height: 351px
+	&__input
 		background: #FFFFFF
 		border: 1px solid #EAEFFF
-	&__review
+		height: 40px
+		&-wrapper
+			display: flex
+			flex-direction: column
+			margin-bottom: 20px
+			p
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				color: #969696
+				span
+					color: red
+	&__textarea
+		background: #FFFFFF
+		border: 1px solid #EAEFFF
+		min-height: 125px
+		resize: none
+		&-wrapper
+			display: flex
+			flex-direction: column
+			p
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				color: #969696
+	&__select
+		&-wrapper
+			p
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				color: #969696
+	&__pros
+		&-input
+			margin-bottom: 10px
+			padding-left: 10px
+			background: #FFFFFF
+			border: 1px solid #EAEFFF
+			height: 40px
+			font-weight: 400
+			font-size: 14px
+			color: #D1D1D1
+		&-wrapper
+			display: flex
+			flex-direction: column
+			p
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				color: #969696
+				span
+					color: red
+			a
+				font-weight: 400
+				font-size: 14px
+				text-align: right
+				text-decoration-line: underline
+				color: #5277F7
+	&__cros
+		position: relative
+		input
+			width: 100%
+		img
+			position: absolute
+			right: 0
+	&__btn
+		width: 100%
+		padding: 10px 0
+		background: #5277F7
+		border-radius: 20px
+		border: none
+		font-weight: 400
+		font-size: 14px
+		text-align: center
+		color: #FFFFFF
+	&__center
+		justify-content: center
+		margin-top: 20px
+		margin-bottom: 25px
+	&__hr
+		margin-top: 20px
+.input-color
+	color: #819EC7
+
+.all-comm
+	padding-top: 20px
+	margin-bottom: 40px
+	&__title
+		font-weight: 700
+		font-size: 16px
+		line-height: 22px
+		color: #333333
+	&__wrapper
+		font-weight: 400
+		font-size: 14px
+		color: #969696
+
+.trader
+	padding-top: 20px
+	padding-bottom: 20px
+	&-line-m
+		display: none
+	&__wrapper
+		background: #FFFFFF
+		border: 1px solid #EAEFFF
+		&-pad
+			padding: 15px 20px 10px 20px
+			&-def
+				padding: 20px 20px 10px 20px
+		&-def
+			position: relative
+			margin-left: 60px
+		&-gray
+			margin-bottom: 20px
+			background: #F8FAFF
+	&__container
 		display: flex
-		align-items: center
-		width: 351px
-		height: 30px
+		justify-content: space-between
+		flex-wrap: wrap
+		&-def
+			margin-bottom: 20px
+	&__top
+		margin-top: 20px
+		display: flex
 		background: linear-gradient(224.39deg, #FC9F47 2.1%, #D73777 64.48%, #8F44B2 98.23%)
 		border-radius: 0px 15px 15px 0px
+	&__cont
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 30px
 		h2
 			margin: 0
-			padding-left: 20px
+			margin-left: 20px
 			font-weight: 700
 			font-size: 14px
 			color: #FFFFFF
 		p
 			margin: 0
-			padding-left: 80px
+			margin-left: 80px
+			margin-right: 20px
 			font-weight: 400
 			font-size: 12px
 			color: #FFFFFF
-		img
-			padding-left: 20px
-		h3
-			margin: 0
-			padding-left: 14px
-			font-weight: 700
-			font-size: 10px
-			color: #FFFFFF
+	&__invited
+		margin: auto
+		margin-right: 30px
+		margin-left: 15px
+		font-weight: 700
+		font-size: 10px
+		color: #FFFFFF
 	&__exp
+		padding-right: 20px
+		margin-top: 20px
+		font-weight: 400
+		font-size: 12px
+		color: #819EC7
+		&-def
+			margin-top: 0
+	&__text
+		font-weight: 400
+		font-size: 14px
+		color: #969696
+	&__advan
+		margin-top: 40px
 		display: flex
-		align-items: center
-		h3
-			margin: 0
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__wrapper
-		display: flex
-		padding-top: 20px
-	&__comment
-		padding: 20px
-		padding-top: 10px
-		padding-bottom: 0
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
 	&__plus
-		padding: 20px 0 4px 20px
-		margin-left: 20px
-		width: 597px
-		background-color: rgba(1, 178, 29, 0.1)
+		flex: 50%
+		padding: 20px
+		margin-right: 20px
+		margin-bottom: 20px
+		background: rgba(1, 178, 29, 0.1)
 		p
 			font-weight: 400
 			font-size: 14px
@@ -504,11 +429,10 @@
 			span
 				margin-right: 10px
 	&__minus
-		padding: 20px 0 4px 20px
-		margin-left: 20px
-		width: 597px
+		flex: 50%
+		padding: 20px
 		height: 60px
-		background-color: rgba(255, 0, 0, 0.1)
+		background: rgba(255, 0, 0, 0.1)
 		p
 			font-weight: 400
 			font-size: 14px
@@ -516,203 +440,74 @@
 			color: #FF0000
 			span
 				margin-right: 10px
-	&__opinion
-		display: flex
-		button
-			width: 57px
-			height: 30px
-			background: #EAEFFF
-			border: none
-			border-radius: 15px
 	&__bottom
-		padding-top: 10px
-		padding-left: 17px
 		display: flex
-	&__dislikes
-		margin-right: 10px
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__likes
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__reply
+		justify-content: space-between
+		&-def
+			margin-top: 30px
+	&__like-container
 		display: flex
-		align-items: center
-		a
+	&__like
+		display: flex
+		align-items: flex-end
+		background: #EAEFFF
+		border-radius: 15px
+		padding: 8px 13px 10px 10px
+		p
+			margin: 0
+			margin-right: 10px
 			font-weight: 400
-			font-size: 14px
-			text-decoration-line: underline
-			color: #969696
-		:nth-child(n)
-			margin-left: 80px
-		:nth-child(2n)
-			margin-left: 50px
-			color: #5277F7
-
-.trader-two
-	padding: 20px 0 20px 60px
-	&__container
-		position: relative
-		width: 1195px
-		height: 193px
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-	&__review
+			font-size: 12px
+			color: #819EC7
+		img
+			margin-bottom: 5px
+			width: 15px
+			height: 15px
+	&__dislike
 		display: flex
-		align-items: center
-		padding-top: 20px
-		padding-left: 20px
+		align-items: flex-end
+		background: #EAEFFF
+		border-radius: 15px
+		padding: 10px 14px 10px 10px
+		margin-right: 10px
+		p
+			margin: 0
+			margin-right: 10px
+			font-weight: 400
+			font-size: 12px
+			color: #819EC7
+		img
+			// margin-top: 10px
+			width: 15px
+			height: 15px
+	&__comm
+		font-weight: 400
+		font-size: 14px
+		text-align: right
+		text-decoration-line: underline
+		a:nth-child(1)
+			color: #969696
+			margin-right: 50px
+	&__cont-def
+		display: flex
 		h2
 			margin: 0
+			margin-right: 50px
 			font-weight: 700
 			font-size: 14px
 			color: #333333
 		p
 			margin: 0
-			padding-left: 40px
 			font-weight: 400
 			font-size: 12px
 			color: #819EC7
-	&__exp
-		display: flex
-		align-items: center
-		h3
-			margin: 0
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__wrapper
-		display: flex
-		height: 30px
-	&__comment
-		padding: 20px
-		padding-bottom: 0
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-	&__opinion
-		display: flex
-		button
-			width: 57px
-			height: 30px
-			background: #EAEFFF
-			border: none
-			border-radius: 15px
-	&__bottom
-		padding-top: 10px
-		padding-left: 17px
-		display: flex
-	&__dislikes
-		margin-right: 10px
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__likes
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
 	&__arrow
 		position: absolute
-		top: 20px
+		top: 0
 		left: -60px
-
-.trader-three
-	&__container
-		position: relative
-		width: 1255px
-		height: 330px
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-	&__review
-		display: flex
-		align-items: center
-		padding-top: 20px
-		padding-left: 10px
-		h2
-			margin: 0
-			font-weight: 700
-			font-size: 14px
-			color: #333333
-		p
-			margin: 0
-			padding-left: 40px
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__exp
-		display: flex
-		align-items: center
-		h3
-			margin: 0
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__wrapper
-		display: flex
-		align-items: baseline
-		height: 30px
-	&__comment
-		padding: 20px
-		padding-bottom: 0
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-	&__opinion
-		display: flex
-		button
-			width: 57px
-			height: 30px
-			background: #EAEFFF
-			border: none
-			border-radius: 15px
-	&__bottom
-		padding-top: 10px
-		padding-left: 17px
-		display: flex
-	&__dislikes
-		margin-right: 10px
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__likes
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__arrow
-		position: absolute
-		top: 20px
-		left: -60px
-
-.trader-four
-	margin-top: 20px
 	&__cheat
-		margin-top: 20px
-		padding-left: 20px
 		display: flex
+		margin-bottom: 20px
 		img
 			width: 15px
 			height: 15px
@@ -721,212 +516,406 @@
 			font-weight: 700
 			font-size: 12px
 			color: #FF0000
-	&__container
-		position: relative
-		width: 1255px
-		height: 380px
-		border: 1px solid #EAEFFF
-	&__review
-		display: flex
-		align-items: center
-		padding-top: 20px
-		padding-left: 10px
-		h2
-			margin: 0
-			font-weight: 700
-			font-size: 14px
-			color: #333333
-		p
-			margin: 0
-			padding-left: 40px
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__exp
-		display: flex
-		align-items: center
-		h3
-			margin: 0
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__wrapper
-		display: flex
-		align-items: baseline
-		height: 30px
-	&__comment
-		padding: 20px
-		padding-bottom: 0
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-	&__opinion
-		display: flex
-		button
-			width: 57px
-			height: 30px
-			background: #EAEFFF
-			border: none
-			border-radius: 15px
-	&__bottom
-		padding-top: 10px
-		padding-left: 17px
-		display: flex
-	&__dislikes
-		margin-right: 10px
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__likes
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__arrow
-		position: absolute
-		top: 20px
-		left: -60px
-
-.trader-five
-	margin-top: 20px
-	&__container
-		position: relative
-		width: 1255px
-		height: 330px
-		background: #F8FAFF
-		border: 1px solid #EAEFFF
-	&__review
-		display: flex
-		align-items: center
-		padding-top: 20px
-		padding-left: 10px
-		h2
-			margin: 0
-			font-weight: 700
-			font-size: 14px
-			color: #333333
-		p
-			margin: 0
-			padding-left: 40px
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__exp
-		display: flex
-		align-items: center
-		h3
-			margin: 0
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__wrapper
-		display: flex
-		align-items: baseline
-		height: 30px
-	&__comment
-		padding: 20px
-		padding-bottom: 0
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #969696
-	&__opinion
-		display: flex
-		button
-			width: 57px
-			height: 30px
-			background: #EAEFFF
-			border: none
-			border-radius: 15px
-	&__bottom
-		padding-top: 10px
-		padding-left: 17px
-		display: flex
-	&__dislikes
-		margin-right: 10px
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__likes
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		img
-			width: 18px
-			height: 15px
-	&__arrow
-		position: absolute
-		top: 20px
-		left: -60px
-
-.center
-	justify-content: center
-
-.write-comm
 	&__btn
-		margin-top: 20px
-		padding: 10px 140px
+		padding: 9px 0
+		background: #5277F7
+		border-radius: 20px
 		font-weight: 400
 		font-size: 14px
 		text-align: center
 		color: #FFFFFF
-		background: #5277F7
-		border-radius: 20px
-		border: none
 
-.viewed
-	margin-top: 20px
-	&__rect
-		height: 357px
-		margin-bottom: 0
-		background: #FFFFFF
-		border: none
-		border-right: 1px solid #EAEFFF
-		box-shadow: none
-	h2
+.recently
+	padding-top: 20px
+	padding-bottom: 20px
+	&__title
+		margin-bottom: 20px
 		font-weight: 700
 		font-size: 16px
 		color: #333333
-	h3
-		padding-top: 30px
-		font-weight: 700
-		font-size: 24px
-		color: #333333
-	&__position
-		display: flex
-		padding: 0
-		margin-top: 20px
+	&__company
+		min-height: 360px
 		background: #FFFFFF
 		border: 1px solid #EAEFFF
 		box-shadow: 0px 0px 10px #EAEFFF
-	&__descr
-		margin-left: 30px
-	&__ratings
-		margin-top: 20px
+	&__logo
+		border: none
+		box-shadow: none
+		border-right: 1px solid #EAEFFF
+		&-def
+			padding-top: 60px
+	&__compt
+		margin-top: 35px
 	&__slide
-		img
-			display: block
-			margin: 20px auto
-
-@media (max-width:999px )
-
-@media (min-width:769px)
-
+		margin-top: 15px
+	.recently
+		&__logo
+			img
+				padding: 32px 30px
+		&__slide
+			img
+				display: block
+				margin: 0 auto
+//////////// media  		
+@media (max-width: 1350px)
+	.row-trim
+		max-height: initial
+	.main
+		padding-top: 20px
+		padding-bottom: 20px
+		&__logo
+			width: 100%
+		&__company
+			flex-direction: column
+			margin-bottom: 20px
+			&-text
+				padding: 20px
+			&-title
+				margin-top: 10px
+				text-align: center
+			&-btn
+				padding: 8px 0
+				width: 100%
+		&__crit-item
+			&--left
+				font-size: 12px
+			&--right
+				font-size: 12px
+		&__text
+			margin-top: 20px
+	.share
+		padding-bottom: 20px
+		&__opinion
+			margin-bottom: 20px
+		&__hr-hidden
+			display: none
+	.comment
+		padding-bottom: 20px
+	.all-comm
+		padding-bottom: 20px
+		margin-bottom: 20px
+	.trader
+		&__exp
+			margin-left: 20px
+		&__minus
+			height: 100%
+		&__comm
+			display: flex
+			align-items: center
+		&__cont-m
+			margin-bottom: 20px
+	.recently
+		&__logo
+			img
+				display: block
+				margin: 0 auto
+		&__slide
+			img
+				display: block
+				margin: 0 auto
+@media (max-width:991px )
+	.row-trim
+		max-height: initial
+	.main
+		padding-top: 20px
+		padding-bottom: 20px
+		&__logo
+			width: auto
+		&__company
+			margin-bottom: 20px
+			&-text
+				padding: 0
+			&-btn
+				padding: 8px 0
+				width: 100%
+		&__text
+			margin-top: 20px
+	.share
+		padding-bottom: 20px
+		&__opinion
+			margin-bottom: 20px
+		&__hr-hidden
+			display: none
+	.comment
+		padding-bottom: 20px
+	.all-comm
+		padding-bottom: 20px
+		margin-bottom: 20px
+	.trader
+		&__exp
+			margin-left: 20px
+		&__minus
+			height: 100%
+		&__comm
+			display: flex
+			align-items: center
+		&__cont-m
+			margin-bottom: 20px
+	.recently
+		&__logo
+			img
+				padding: 32px 30px
+		&__slide
+			img
+				display: block
+				margin: 0 auto
+		&__company-text
+			padding: 20px
+//////////////////////////
 @media (max-width:768px)
+	.row-trim
+		max-height: initial
+	.main
+		padding-top: 20px
+		padding-bottom: 20px
+		&__logo
+			margin-right: 30px
+			margin-left: 30px
+			img
+				display: block
+				padding: 30px 0
+				margin: 0 auto
+		&__company
+			margin-bottom: 20px
+			&-text
+				display: flex
+				flex-direction: column
+				align-items: center
+			&-btn
+				padding: 8px 0
+				width: 100%
+		&__text
+			margin-top: 20px
+	.share
+		padding-bottom: 20px
+		&__opinion
+			margin-bottom: 20px
+		&__hr-hidden
+			display: none
+	.comment
+		padding-bottom: 20px
+	.all-comm
+		padding-bottom: 20px
+		margin-bottom: 20px
+	.trader
+		&__exp
+			margin-left: 20px
+		&__minus
+			height: 100%
+		&__comm
+			display: flex
+			align-items: center
+		&__cont-m
+			margin-bottom: 20px
+	.recently
+		&__company-text
+			padding: 20px
+		&__logo
+			img
+				padding: 32px 30px
+		&__slide
+			img
+				display: block
+				margin: 0 auto
+		&__logo
+			border-right: none
+		&__company
+			border: none
+			background: none
+			box-shadow: none
+			&-text
+				padding: 20px
+// ///////
+@media (max-width:575px)
+	.row-trim
+		max-height: initial
+	.main
+		padding-top: 20px
+		padding-bottom: 0
+		&__logo
+			margin-right: 30px
+			margin-left: 30px
+			img
+				display: block
+				padding: 30px 0
+				margin: 0 auto
+		&__company
+			&-title
+				margin-top: 50px
+				margin-bottom: 0
+				font-size: 16px
+				text-align: center
+			&-ratings
+				justify-content: center
+			&-btn
+				width: 100%
+				margin-top: 50px
+				&-hidden
+					display: inline-block
+					margin-top: 20px
+					margin-bottom: 20px
+					color: #FFFFFF
+					background: #273B98
+		&__text
+			background: #F8FAFF
+			&-wrapper
+				padding-top: 20px
+				padding-bottom: 10px
+			&-p
+				font-size: 14px
+				&-display
+					display: none
+	.main__crit-wrapper
+		display: none
+	.main__company
+		flex-direction: column
+	.share
+		padding-bottom: 20px
+		&__hr-hidden
+			display: none
+		&__opinion
+			border: none
+			&-btn
+				padding: 9px 0
+				width: 100%
+				font-weight: 400
+				font-size: 14px
+				text-align: center
+				color: #FFFFFF
+				background: #5277F7
+				border-radius: 20px
+				border: none
+			&-hidden
+				display: none
+			&-hiddenL
+				display: block
+			&-wrapper
+				padding: 0
+			&-title
+				padding-left: 0
+			&-radio
+				display: flex
+				&-mr
+					margin-right: 20px
+				label
+					margin-left: 10px
+					font-weight: 400
+					font-size: 14px
+					color: #969696
+			&-hr
+				margin-top: 20px
+				margin-bottom: 40px
+				color: #EAEFFF
+		&__signs
+			padding-top: 60px
+			border: none
+			&-wrapper
+				padding: 0
+			&-item
+				margin: 20px 0
+			&-img
+				&-hidden
+					display: inline
+				img
+					margin-bottom: 10px
+	.comment
+		padding-bottom: 10px
+	.all-comm
+		padding-bottom: 0
+		margin-bottom: 0
+		&__wrapper
+			margin-bottom: 15px
+	.trader
+		&-line-m
+			display: inline-block
+		&__top
+			height: 50px
+		&__cont
+			margin-top: 7px
+			margin-right: 50px
+			margin-left: 10px
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			h2
+				margin-left: 0
+			p
+				margin-left: 0
+			img
+				display: none
+			&-m
+				margin-bottom: 20px
+		&__exp
+			margin-top: 10px
+			margin-left: 10px
+			&-def
+				margin: 0
+		&__wrapper-pad
+			padding: 10px
+		&__advan
+			margin-top: 20px
+			flex-direction: column
+		&__plus
+			margin-right: 0
+			padding-bottom: 0
+		&__minus
+			padding-bottom: 0
+		&__bottom
+			margin-top: 20px
+		&__like-container
+			flex-wrap: wrap
+			align-items: flex-end
+		&__comm
+			display: flex
+			flex-direction: column
+			a:nth-child(1)
+				margin-right: 0
+				margin-bottom: 10px
+		&__dislike
+			height: 30px
+			align-items: center
+		&__like
+			height: 30px
+			align-items: center
+		&__cheat
+			margin-top: 10px
+	.recently
+		padding-top: 0
+		&__logo
+			border-right: none
+		&__company
+			border: none
+			background: none
+			box-shadow: none
+		&__title
+			display: none
+		&__logo-def
+			border: none
+			background: none
+			box-shadow: none
+		&__compt
+			margin-top: 0
+		&__btn
+			margin-top: 10px
+		&__slide
+			img
+				display: block
+				margin: 0 auto
 
-@media (max-width:574px)
+.swiper
+	margin-top: 1px
 
-@media (max-width:480px)
+.swiper-wrapper
+	height: 240px
+	margin-bottom: 35px !important
 
-@media (max-width:347px)
+.swiper-slide
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.select-wrapper .select-display
+	background: #FFFFFF
+	border: 1px solid #EAEFFF !important
+	height: 40px
