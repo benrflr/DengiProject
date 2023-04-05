@@ -4,918 +4,323 @@
 .container-fluid
 	padding-left: 116px
 	padding-right: 116px
-
+@media (max-width: 1400px)
+.container-fluid
+	padding-left: 50px
+	padding-right: 50px
 @media (max-width: 1000px)
 	.container-fluid
 		padding-left: var(--bs-gutter-x) !important
 		padding-right: var(--bs-gutter-x)!important
 
-.row-trim
-	max-height: 283px
+.main-section
+	position: relative
+	z-index: 2
+	margin-bottom: -12vw
+@media (max-width:999px )
+	.main-section
+		margin-bottom: -11vw
+.main-section__img
+	background: right/contain no-repeat
+	height: calc(var(--index)*23.29)
+	width: calc(var(--index)*24.2)
+.main-section__right
+	display: flex
+	justify-content: flex-end
 
-.main
-	padding-top: 60px
-	&__company
+	///search
+.search-container
+	width: 80%
+	margin: 60px auto 0px auto
+
+@media (min-width:769px)
+	.input-group
+		position: relative
 		display: flex
-		&-title
-			font-style: normal
-			font-weight: 700
-			font-size: 24px
-			line-height: 33px
-			color: #333333
-		&-descr
-			display: flex
-			align-items: center
-			margin-bottom: 12px
-			font-style: normal
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #333333
-			p
-				margin: 0
-			img
-				width: 16px
-				height: 16px
-				margin-right: 10px
-		&-ratings
-			display: flex
-			margin-top: 20px
-			margin-right: -10px
-			margin-bottom: 22px
-		&-rating
-			cursor: pointer
-			background: url(../images/dist/baks-licke.png) 0 -50px/cover no-repeat
-			width: 40px
-			margin-right: 10px
-			height: 40px
-			transition: all .30s ease-in-out
-			&:hover
-				background-position: 0 0
-			&.active
-				background-position: 0 0
-				pointer-events: none
-		&-btn
-			margin-top: 15px
-			padding: 13px 43px
-			font-weight: 400
-			font-size: 14px
-			line-height: 100%
-			text-align: center
-			color: #819EC7
-			background: #FFFFFF
-			border: 1px solid #D4DBF2
-			border-radius: 20px
-			&-hidden
-				display: none
-	&__logo
-		margin-right: 30px
-		background: #FFFFFF
+		background: transparent
 		border: 1px solid #EAEFFF
-		box-shadow: 0px 0px 10px #EAEFFF
-		img
-			padding: 32px 67px
-	&__slider
-		display: flex
-		justify-content: space-between
-		&-wrapper
-			position: absolute
-			bottom: 10px
-			left: 10px
-		&-title
-			margin-bottom: 10px
-			font-weight: 400
-			font-size: 12px
-			line-height: 16px
-			color: #FFFFFF
-		&-action
-			font-weight: 400
-			font-size: 12px
-			line-height: 16px
-			color: #FFCA50
-			text-decoration: none
-		&-img
-			margin-top: 15px
-			img
-				display: block
-				margin: 0 auto
-	&__crit
-		&-wrapper
-			padding: 20px
-			background: #FFFFFF
-			border: 1px solid #EAEFFF
-			box-shadow: 0px 0px 10px #EAEFFF
-		&-title
-			font-style: normal
-			font-weight: 700
-			font-size: 16px
-			color: #333333
-		&-item
-			padding: 10px 0
-			display: flex
-			justify-content: space-between
-			border-bottom: 1px solid #EAEFFF
-			&--left
-				font-weight: 400
-				font-size: 16px
-				color: #969696
-			&--right
-				font-weight: 400
-				font-size: 16px
-				color: #273B98
-		&-btn
-			margin-top: 40px
-			padding: 10px 0
-			width: 100%
-			font-weight: 400
-			font-size: 14px
-			text-align: center
-			color: #819EC7
-			background: #FFFFFF
-			border: 1px solid #D4DBF2
-			border-radius: 20px
-	&__text
-		margin-top: 20px
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		box-shadow: 0px 0px 10px #EAEFFF
+		border-radius: 40px
+	.search-input
+		flex: 1 1 auto
+	.select-wrap
+		flex: 0 0 auto
+.search-input
+	position: relative
+	input[type="text"]
+		border: none
+		background-color: transparent
 		font-style: normal
 		font-weight: 400
-		font-size: 16px
-		line-height: 22px
-		color: #333333
-		&-wrapper
-			padding: 50px 20px
-
-.share
-	padding-top: 40px
-	&__title
-		font-weight: 700
-		font-size: 16px
-		color: #333333
-	&__wrapper
-		margin-top: 20px
-		margin-bottom: 40px
-		display: flex
-		justify-content: space-around
-		background: #F8FAFF
-		border: 1px solid #EAEFFF
-		box-shadow: 0px 0px 10px #EAEFFF
-		border-radius: 5px
-	&__item
-		padding: 20px 0
+		font-size: 18px
+		line-height: 100%
+		color: #D4DBF2
 		width: 100%
-		a
-			display: block
-			border-right: 1px solid #D4DBF2
-			img
-				display: block
-				margin: 0 auto
-		a[data-atr="nob"]
-			border: none
-	&__opinion
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		border-radius: 5px
-		&-hiddenL
-			display: none
-		&-wrapper
-			padding: 20px
-		img
-			width: 100%
-			margin-bottom: 20px
-		&-title
-			margin-bottom: 20px
-			padding-left: 15px
-			font-weight: 700
-			font-size: 16px
-			color: #333333
-		&-answer
-			margin-bottom: 20px
-			font-weight: 400
-			font-size: 14px
-			color: #969696
-		&-container
-			display: flex
-			justify-content: space-between
-			font-weight: 400
-			font-size: 14px
-			color: #969696
-			p
-				margin: 0
-			span
-				font-style: normal
-				font-weight: 700
-				color: #333333
-	&__signs
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		border-radius: 5px
-		&-wrapper
-			padding: 20px
-		&-title
-			margin: 0
-			font-weight: 700
-			font-size: 16px
-			color: #333333
-		&-item
-			display: flex
-			align-items: center
-			padding: 15px 0
-			font-weight: 400
-			font-size: 14px
-			color: #969696
-			border-bottom: 1px solid #EAEFFF
-			img
-				margin-right: 20px
-				height: 40px
-			&:last-child
-				border: none
-		&-img-hidden
-			display: none
-	&__hr
-		margin-top: 40px
-		margin-bottom: 0
-		height: 3px
-		background-color: #EAEFFF
-
-.comment
-	padding-top: 20px
-	&__title
-		margin-bottom: 30px
-		font-weight: 700
-		font-size: 16px
-		color: #333333
-	&__input
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		height: 40px
-		&-wrapper
-			display: flex
-			flex-direction: column
-			margin-bottom: 20px
-			p
-				margin: 0
-				font-weight: 400
-				font-size: 14px
-				color: #969696
-				span
-					color: red
-	&__textarea
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		min-height: 125px
-		resize: none
-		&-wrapper
-			display: flex
-			flex-direction: column
-			p
-				margin: 0
-				font-weight: 400
-				font-size: 14px
-				color: #969696
-	&__select
-		&-wrapper
-			p
-				margin: 0
-				font-weight: 400
-				font-size: 14px
-				color: #969696
-	&__pros
-		&-input
-			margin-bottom: 10px
-			padding-left: 10px
-			background: #FFFFFF
-			border: 1px solid #EAEFFF
-			height: 40px
-			font-weight: 400
-			font-size: 14px
-			color: #D1D1D1
-		&-wrapper
-			display: flex
-			flex-direction: column
-			p
-				margin: 0
-				font-weight: 400
-				font-size: 14px
-				color: #969696
-				span
-					color: red
-			a
-				font-weight: 400
-				font-size: 14px
-				text-align: right
-				text-decoration-line: underline
-				color: #5277F7
-	&__cros
-		position: relative
-		input
-			width: 100%
-		img
-			position: absolute
-			right: 0
-	&__btn
-		width: 100%
-		padding: 10px 0
-		background: #5277F7
-		border-radius: 20px
-		border: none
-		font-weight: 400
-		font-size: 14px
-		text-align: center
-		color: #FFFFFF
-	&__center
-		justify-content: center
-		margin-top: 20px
-		margin-bottom: 25px
-	&__hr
-		margin-top: 20px
-.input-color
+		padding: 20px 52px 20px 20px
+		&::placeholder
+			color: #D4DBF2
+.magnifying-glass
+	fill: #819EC7
+.select-wrap
+	cursor: pointer
+	position: relative
+	padding: 0 20px
+	border-right: 1px solid #EAEFFF
+	background: #F8FAFF
+	border-top-left-radius: 20px
+	border-bottom-left-radius: 20px
+	display: flex
+.select-container__defold
+	display: flex
+	align-items: center
+.select-container__options
+	font-style: normal
+	font-weight: 400
+	font-size: 18px
+	line-height: 100%
 	color: #819EC7
+.down-arrow
+	position: static
+	margin-top: 4px
+	fill: #819EC7
+.select-container__list
+	display: none
+	position: absolute
+	bottom: -100%
+	left: 0
+	padding: 0
+	margin: 0
+	li
+		margin: 6px
+		list-style: none
+.input-group__btn
+	background-color: transparent
+	position: absolute
+	right: 10px
+	top: 50%
+	transform: translateY(-50%)
+	border: none
 
-.all-comm
-	padding-top: 20px
-	margin-bottom: 40px
-	&__title
+//--------------
+
+.interested-section__head
+	margin-bottom: 10px
+.interested-section__block
+	text-align: center
+.interested-section__link
+	text-decoration: none
+	&:hover
+		text-decoration: none
+	h5
+		font-size: calc(var(--index)*0.9)
 		font-weight: 700
-		font-size: 16px
-		line-height: 22px
-		color: #333333
-	&__wrapper
-		font-weight: 400
-		font-size: 14px
-		color: #969696
-
-.trader
-	padding-top: 20px
-	padding-bottom: 20px
-	&-line-m
-		display: none
-	&__wrapper
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		&-pad
-			padding: 15px 20px 10px 20px
-			&-def
-				padding: 20px 20px 10px 20px
-		&-def
-			position: relative
-			margin-left: 60px
-		&-gray
-			margin-bottom: 20px
-			background: #F8FAFF
-	&__container
-		display: flex
-		justify-content: space-between
-		flex-wrap: wrap
-		&-def
-			margin-bottom: 20px
-	&__top
-		margin-top: 20px
-		display: flex
-		background: linear-gradient(224.39deg, #FC9F47 2.1%, #D73777 64.48%, #8F44B2 98.23%)
-		border-radius: 0px 15px 15px 0px
-	&__cont
-		display: flex
-		justify-content: space-between
-		align-items: center
-		height: 30px
-		h2
-			margin: 0
-			margin-left: 20px
-			font-weight: 700
-			font-size: 14px
-			color: #FFFFFF
-		p
-			margin: 0
-			margin-left: 80px
-			margin-right: 20px
-			font-weight: 400
-			font-size: 12px
-			color: #FFFFFF
-	&__invited
-		margin: auto
-		margin-right: 30px
-		margin-left: 15px
-		font-weight: 700
-		font-size: 10px
-		color: #FFFFFF
-	&__exp
-		padding-right: 20px
-		margin-top: 20px
-		font-weight: 400
-		font-size: 12px
-		color: #819EC7
-		&-def
-			margin-top: 0
-	&__text
-		font-weight: 400
-		font-size: 14px
-		color: #969696
-	&__advan
-		margin-top: 40px
-		display: flex
-	&__plus
-		flex: 50%
-		padding: 20px
-		margin-right: 20px
-		margin-bottom: 20px
-		background: rgba(1, 178, 29, 0.1)
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #01B31D
-			span
-				margin-right: 10px
-	&__minus
-		flex: 50%
-		padding: 20px
-		height: 60px
-		background: rgba(255, 0, 0, 0.1)
-		p
-			font-weight: 400
-			font-size: 14px
-			line-height: 19px
-			color: #FF0000
-			span
-				margin-right: 10px
-	&__bottom
-		display: flex
-		justify-content: space-between
-		&-def
-			margin-top: 30px
-	&__like-container
-		display: flex
-	&__like
-		display: flex
-		align-items: flex-end
-		background: #EAEFFF
-		border-radius: 15px
-		padding: 8px 13px 10px 10px
-		p
-			margin: 0
-			margin-right: 10px
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-		img
-			margin-bottom: 5px
-			width: 15px
-			height: 15px
-	&__dislike
-		display: flex
-		align-items: flex-end
-		background: #EAEFFF
-		border-radius: 15px
-		padding: 10px 14px 10px 10px
-		margin-right: 10px
-		p
-			margin: 0
-			margin-right: 10px
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-		img
-			// margin-top: 10px
-			width: 15px
-			height: 15px
-	&__comm
-		font-weight: 400
-		font-size: 14px
-		text-align: right
-		text-decoration-line: underline
-		a:nth-child(1)
-			color: #969696
-			margin-right: 50px
-	&__cont-def
-		display: flex
-		h2
-			margin: 0
-			margin-right: 50px
-			font-weight: 700
-			font-size: 14px
-			color: #333333
-		p
-			margin: 0
-			font-weight: 400
-			font-size: 12px
-			color: #819EC7
-	&__arrow
-		position: absolute
-		top: 0
-		left: -60px
-	&__cheat
-		display: flex
-		margin-bottom: 20px
-		img
-			width: 15px
-			height: 15px
-		h3
-			font-style: normal
-			font-weight: 700
-			font-size: 12px
-			color: #FF0000
-	&__btn
-		padding: 9px 0
-		background: #5277F7
-		border-radius: 20px
-		font-weight: 400
-		font-size: 14px
-		text-align: center
-		color: #FFFFFF
-
-.recently
-	padding-top: 20px
-	padding-bottom: 20px
-	&__title
-		margin-bottom: 20px
-		font-weight: 700
-		font-size: 16px
-		color: #333333
-	&__company
-		min-height: 360px
-		background: #FFFFFF
-		border: 1px solid #EAEFFF
-		box-shadow: 0px 0px 10px #EAEFFF
-	&__logo
-		border: none
-		box-shadow: none
-		border-right: 1px solid #EAEFFF
-		&-def
-			padding-top: 60px
-	&__compt
-		margin-top: 35px
-	&__slide
-		margin-top: 15px
-	.recently
-		&__logo
-			img
-				padding: 32px 30px
-		&__slide
-			img
-				display: block
-				margin: 0 auto
-//////////// media  		
-@media (max-width: 1350px)
-	.row-trim
-		max-height: initial
-	.main
-		padding-top: 20px
-		padding-bottom: 20px
-		&__logo
-			width: 100%
-		&__company
-			flex-direction: column
-			margin-bottom: 20px
-			&-text
-				padding: 20px
-			&-title
-				margin-top: 10px
-				text-align: center
-			&-btn
-				padding: 8px 0
-				width: 100%
-		&__crit-item
-			&--left
-				font-size: 12px
-			&--right
-				font-size: 12px
-		&__text
-			margin-top: 20px
-	.share
-		padding-bottom: 20px
-		&__opinion
-			margin-bottom: 20px
-		&__hr-hidden
-			display: none
-	.comment
-		padding-bottom: 20px
-	.all-comm
-		padding-bottom: 20px
-		margin-bottom: 20px
-	.trader
-		&__exp
-			margin-left: 20px
-		&__minus
-			height: 100%
-		&__comm
-			display: flex
-			align-items: center
-		&__cont-m
-			margin-bottom: 20px
-	.recently
-		&__logo
-			img
-				display: block
-				margin: 0 auto
-		&__slide
-			img
-				display: block
-				margin: 0 auto
-@media (max-width:991px )
-	.row-trim
-		max-height: initial
-	.main
-		padding-top: 20px
-		padding-bottom: 20px
-		&__logo
-			width: auto
-		&__company
-			margin-bottom: 20px
-			&-text
-				padding: 0
-			&-btn
-				padding: 8px 0
-				width: 100%
-		&__text
-			margin-top: 20px
-	.share
-		padding-bottom: 20px
-		&__opinion
-			margin-bottom: 20px
-		&__hr-hidden
-			display: none
-	.comment
-		padding-bottom: 20px
-	.all-comm
-		padding-bottom: 20px
-		margin-bottom: 20px
-	.trader
-		&__exp
-			margin-left: 20px
-		&__minus
-			height: 100%
-		&__comm
-			display: flex
-			align-items: center
-		&__cont-m
-			margin-bottom: 20px
-	.recently
-		&__logo
-			img
-				padding: 32px 30px
-		&__slide
-			img
-				display: block
-				margin: 0 auto
-		&__company-text
-			padding: 20px
-//////////////////////////
-@media (max-width:768px)
-	.row-trim
-		max-height: initial
-	.main
-		padding-top: 20px
-		padding-bottom: 20px
-		&__logo
-			margin-right: 30px
-			margin-left: 30px
-			img
-				display: block
-				padding: 30px 0
-				margin: 0 auto
-		&__company
-			margin-bottom: 20px
-			&-text
-				display: flex
-				flex-direction: column
-				align-items: center
-			&-btn
-				padding: 8px 0
-				width: 100%
-		&__text
-			margin-top: 20px
-	.share
-		padding-bottom: 20px
-		&__opinion
-			margin-bottom: 20px
-		&__hr-hidden
-			display: none
-	.comment
-		padding-bottom: 20px
-	.all-comm
-		padding-bottom: 20px
-		margin-bottom: 20px
-	.trader
-		&__exp
-			margin-left: 20px
-		&__minus
-			height: 100%
-		&__comm
-			display: flex
-			align-items: center
-		&__cont-m
-			margin-bottom: 20px
-	.recently
-		&__company-text
-			padding: 20px
-		&__logo
-			img
-				padding: 32px 30px
-		&__slide
-			img
-				display: block
-				margin: 0 auto
-		&__logo
-			border-right: none
-		&__company
-			border: none
-			background: none
-			box-shadow: none
-			&-text
-				padding: 20px
-// ///////
-@media (max-width:575px)
-	.row-trim
-		max-height: initial
-	.main
-		padding-top: 20px
-		padding-bottom: 0
-		&__logo
-			margin-right: 30px
-			margin-left: 30px
-			img
-				display: block
-				padding: 30px 0
-				margin: 0 auto
-		&__company
-			&-title
-				margin-top: 50px
-				margin-bottom: 0
-				font-size: 16px
-				text-align: center
-			&-ratings
-				justify-content: center
-			&-btn
-				width: 100%
-				margin-top: 50px
-				&-hidden
-					display: inline-block
-					margin-top: 20px
-					margin-bottom: 20px
-					color: #FFFFFF
-					background: #273B98
-		&__text
-			background: #F8FAFF
-			&-wrapper
-				padding-top: 20px
-				padding-bottom: 10px
-			&-p
-				font-size: 14px
-				&-display
-					display: none
-	.main__crit-wrapper
-		display: none
-	.main__company
-		flex-direction: column
-	.share
-		padding-bottom: 20px
-		&__hr-hidden
-			display: none
-		&__opinion
-			border: none
-			&-btn
-				padding: 9px 0
-				width: 100%
-				font-weight: 400
-				font-size: 14px
-				text-align: center
-				color: #FFFFFF
-				background: #5277F7
-				border-radius: 20px
-				border: none
-			&-hidden
-				display: none
-			&-hiddenL
-				display: block
-			&-wrapper
-				padding: 0
-			&-title
-				padding-left: 0
-			&-radio
-				display: flex
-				&-mr
-					margin-right: 20px
-				label
-					margin-left: 10px
-					font-weight: 400
-					font-size: 14px
-					color: #969696
-			&-hr
-				margin-top: 20px
-				margin-bottom: 40px
-				color: #EAEFFF
-		&__signs
-			padding-top: 60px
-			border: none
-			&-wrapper
-				padding: 0
-			&-item
-				margin: 20px 0
-			&-img
-				&-hidden
-					display: inline
-				img
-					margin-bottom: 10px
-	.comment
-		padding-bottom: 10px
-	.all-comm
-		padding-bottom: 0
-		margin-bottom: 0
-		&__wrapper
-			margin-bottom: 15px
-	.trader
-		&-line-m
-			display: inline-block
-		&__top
-			height: 50px
-		&__cont
-			margin-top: 7px
-			margin-right: 50px
-			margin-left: 10px
-			display: flex
-			flex-direction: column
-			align-items: flex-start
-			h2
-				margin-left: 0
-			p
-				margin-left: 0
-			img
-				display: none
-			&-m
-				margin-bottom: 20px
-		&__exp
-			margin-top: 10px
-			margin-left: 10px
-			&-def
-				margin: 0
-		&__wrapper-pad
-			padding: 10px
-		&__advan
-			margin-top: 20px
-			flex-direction: column
-		&__plus
-			margin-right: 0
-			padding-bottom: 0
-		&__minus
-			padding-bottom: 0
-		&__bottom
-			margin-top: 20px
-		&__like-container
-			flex-wrap: wrap
-			align-items: flex-end
-		&__comm
-			display: flex
-			flex-direction: column
-			a:nth-child(1)
-				margin-right: 0
-				margin-bottom: 10px
-		&__dislike
-			height: 30px
-			align-items: center
-		&__like
-			height: 30px
-			align-items: center
-		&__cheat
-			margin-top: 10px
-	.recently
-		padding-top: 0
-		&__logo
-			border-right: none
-		&__company
-			border: none
-			background: none
-			box-shadow: none
-		&__title
-			display: none
-		&__logo-def
-			border: none
-			background: none
-			box-shadow: none
-		&__compt
-			margin-top: 0
-		&__btn
-			margin-top: 10px
-		&__slide
-			img
-				display: block
-				margin: 0 auto
-
-.swiper
-	margin-top: 1px
-
-.swiper-wrapper
-	height: 240px
-	margin-bottom: 35px !important
-
-.swiper-slide
 	img
-		width: 100%
-		height: 100%
-		object-fit: cover
+		display: inline-block
+		width: calc(var(--index)*10)
+		height: auto
+.interested-section__icons
+	margin-bottom: 20px
 
-.select-wrapper .select-display
-	background: #FFFFFF
-	border: 1px solid #EAEFFF !important
-	height: 40px
+.Investor-section__block
+	.btn
+		display: inline-block
+		margin-top: 24px
+
+.comments-section__col
+	display: flex
+	cursor: grab
+.decor
+	padding: 14px 20px
+	border: 1px solid #EAEFFF
+	box-shadow: 0px 0px 10px #EAEFFF
+.comments-section__user
+	margin-bottom: 11px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.comments-section__user-title
+	font-size: 16px
+	span
+		display: block
+.comments-section__cat,.comments-section__pod
+	margin-bottom: 5px
+.comments-section__cat
+	font-size: 1em
+	font-weight: 700
+	color: $color-head-main
+.comments-section__pod
+	a
+		font-size: .81em
+		color: inherit
+		&:hover
+			color: darken($textcolor, 10% )
+.comments-section__user-neme
+	font-weight: 700
+	font-size: 11px
+	color: #B9B9B9
+
+.reting
+	display: flex
+	margin-right: -10px
+.reting__nem
+	cursor: pointer
+	background: url(../images/dist/baks-licke.png) 0 -32px/cover no-repeat
+	width: 25.87px
+	margin-right: 10px
+	height: 26px
+	transition: all .30s ease-in-out
+	&:hover
+		background-position: 0 0
+	&.active
+		background-position: 0 0
+		pointer-events: none
+
+.comments-section__comm
+	color: #969696
+
+.comments-section__link
+	font-size: 14px
+	color: #5277F7
+	transition: all .30s ease-in
+	&:hover
+		color: darken($textcolor, 10% )
+
+.about-section__block.paragraph
+	p
+		text-align: center
+		color: #fff
+.team-section
+	position: relative
+	z-index: 2
+	padding: 19px 0 14px 0
+.team-section__title
+	margin-bottom: 40px
+	&.paragraph--section
+		p
+			color: #969696
+			text-align: center
+.team-section__items
+	display: flex
+	height: unset
+	cursor: grab
+
+.team-section__block
+	height: 100%
+	text-align: center
+	p
+		color: #969696
+		font-size: 11px
+		text-align: center
+	span
+		display: block
+		text-align: center
+.team-section__avatar
+	margin-bottom: 5px
+	border-radius: 50%
+	width: 180px
+	display: inline-block
+	height: auto
+	object-fit: cover
+.team-section__name
+	margin-bottom: 5px
+	color: #333
+	font-weight: 700
+	text-align: 18px
+.team-section__dj
+	margin-bottom: 15px
+	color: inherit
+	font-size: 14px
+
+@media (max-width:768px)
+	.mentions-section
+		img
+			margin-top: calc(var(--index)*3)
+	.interested-section__block
+		img
+			width: 100%
+
+	.interested-section__row
+		width: 78%
+		margin: 0 auto
+		& > .col-12
+			display: flex
+			&:nth-child(odd)
+				.interested-section__block
+					width: 196px
+					margin-right: auto
+			&:nth-child(even)
+				.interested-section__block
+					width: 196px
+					margin-left: auto
+
+	.input-group
+		border: none
+	.select-wrap
+		height: 64px
+		border-radius: 40px
+		width: 100%
+		border: 1px solid #EAEFFF
+		margin-bottom: 40px
+	.select-container__defold
+		width: 100%
+		justify-content: space-between
+	.down-arrow
+		height: 32px
+		width: auto
+	.search-input
+		background: #fff
+		border: 1px solid #EAEFFF
+		border-radius: 40px
+	.select-container__options
+		display: block !important
+@media (max-width:574px)
+	.interested-section__row
+		width: unset
+		margin: 0
+		& > .col-12
+			display: flex
+			&:nth-child(odd)
+				.interested-section__block
+					width: calc(var(--index)*15)
+					margin-right: auto
+			&:nth-child(even)
+				.interested-section__block
+					width: calc(var(--index)*15)
+					margin-left: auto
+	.interested-section__link
+		img
+			resize: both
+			width: calc(var(--index)*15)
+			height: calc(var(--index)*15)
+
+		h5
+			font-size: calc(var(--index)*1.4)
+@media (max-width:480px)
+	.search-container
+		width: 100%
+	.interested-section__row
+		& > .col-12
+			&:nth-child(odd)
+				.interested-section__block
+					width: calc(var(--index)*13)
+					margin-right: auto
+			&:nth-child(even)
+				.interested-section__block
+					width: calc(var(--index)*13)
+					margin-left: auto
+	.interested-section__link
+		img
+			resize: both
+			width: calc(var(--index)*13)
+			height: calc(var(--index)*13)
+
+		h5
+			font-size: calc(var(--index)*1.4)
+@media (max-width:347px)
+	.comments-section__col
+		.reting
+			margin-top: 10px
+			margin-bottom: 0
+		.comments-section__user
+			align-items: flex-start
+			flex-direction: column
