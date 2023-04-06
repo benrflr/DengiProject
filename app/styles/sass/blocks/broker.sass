@@ -833,25 +833,20 @@
     .vote-block__button-test
         margin-bottom: 20px
     .filter-form
-        grid-template-columns: 1fr
-        gap: 0
-        row-gap: 15px
+        grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr)
+        gap: 10px
+        row-gap: 30px
         margin: 0
-        padding: 0
+        padding: 10px
         margin-bottom: 20px
         box-sizing: border-box
         &__selector
-            grid-column: 1
             font-size: 14px
             justify-content: flex-start
             padding: 22px 25px
-            margin-left: 10px
-            margin-bottom: 5px
         &__popap-button
-            margin-left: 2px
-            grid-column: 1
             font-size: 18px
-            height: 60px
+            height: 70px
     .broker-list
         &__container
             gap: 20px
@@ -860,6 +855,9 @@
             grid-template-columns: 170px 260px
             h1
                 font-size: 18px
+            &-rating
+                img
+                    width: 30px
     .broker-list__item-address, .broker-list__item-mail, .broker-list__item-rating, .broker-list__item-tel
         gap: 5px
     .broker-list__item-link
@@ -874,6 +872,8 @@
         bottom: 20px
         position: absolute
         width: 180px
+    .broker-list__item-licenses
+        font-size: 14px
     .broker-list__item-logo
         width: 180px
     .cheat
